@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 50px);
+}
+
+header {
+    display: grid;
+    place-items: center;
+    height: 50px;
+}
+
+h1 {
+    cursor: pointer;
+}
+
+button[type='submit'] {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 18px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 18px 4px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+}
+
+button[type='submit']:hover {
+    background-color: #ff0000;
+}
+
+.change {
+    position: absolute;
+    left: 0;
+    bottom: 6rem;
+    width: 100px;
+    height: 100px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: fit-content;
+}
+
+#btn {
+    background-color: transparent;
+    border-top: 1px solid #00ff00;
+    border-bottom: 1px solid #00ff00;
+    border-left: none;
+    border-right: 1px solid #00ff00;
+    -webkit-box-shadow: 5px 5px 18px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 18px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px 5px 5px 2px;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+#btn:hover {
+    background-color: #00ff00;
+}
+
+#btn img {
+    width: 40px;
+    height: 40px;
+}

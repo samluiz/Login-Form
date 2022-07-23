@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../src/styles/globals.css"
+        />
+        <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../src/styles/login.css" />
+        <title>Saurs | Login</title>
+    </head>
+    <body>
+        <header>
+          <% if(messages.error) { %> <%= messages.error %> <% } %>
+            <h1>SAURS</h1>
+        </header>
+        <div class="container">
+            <form action="/login" method="post">
+                <label for="email"
+                    >EMAIL<input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="example@mail.com"
+                        required
+                /></label>
+                <label for="password"
+                    >PASSWORD<input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="*******" onclick="this.placeholder = ''" onblur="this.placeholder = '*******'"
+                        required />
+
+                        <i id="myBtn" class="fa fa-eye-slash" onclick="showPassword()" aria-hidden="true"></i>
+                      
+                      </label>
+                </label>
+                <button type="submit">LOGIN</button>
+                <span
+                    >Are you new here?
+                    <a href="/register">CREATE ACCOUNT</a></span
+                >
+            </form>
+            <button id="btn" class="change" onclick="changeTheme()">
+                <img src="../src/img/switch.svg" alt="Change theme" />
+            </button>
+        </div>
+
+        <script src="../src/styles/theme.js"></script>
+        <script src="../src/styles/showpassword.js"></script>
+    </body>
+</html>

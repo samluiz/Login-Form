@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../src/styles/globals.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../src/styles/register.css"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>SAURS</h1>
+        </header>
+        <div class="container">
+            <form action="/register" method="post">
+                <label for="username"
+                    >USER<input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Sammy Louis"
+                        oninvalid="this.setCustomValidity('Enter Username Here')"
+                        oninput="this.setCustomValidity('')"
+                        required
+                /></label>
+                <label for="email"
+                    >EMAIL<input
+                        type="email"
+                        id="email"
+                        name="email"
+                        oninvalid="this.setCustomValidity('Enter Email Here')"
+                        oninput="this.setCustomValidity('')"
+                        placeholder="example@mail.com"
+                        required
+                /></label>
+                <label for="password"
+                    >PASSWORD<input
+                        type="password"
+                        id="password"
+                        name="password"
+                        minlength="8"
+                        placeholder="********"
+                        onclick="this.placeholder = ''"
+                        onblur="this.placeholder = '*******'"
+                        oninvalid="this.setCustomValidity('Your password must have at least 8 digits')"
+                        oninput="this.setCustomValidity('')"
+                        required
+                    />
+
+                    <i
+                        id="myBtn"
+                        class="fa fa-eye-slash"
+                        onclick="showPassword()"
+                        aria-hidden="false"
+                    ></i>
+                </label>
+                <button type="submit">REGISTER</button>
+                <span
+                    >Have you been here before? <a href="/login">LOGIN</a></span
+                >
+            </form>
+            <button id="btn" class="change" onclick="changeTheme()">
+                <img src="../src/img/switch.svg" alt="Change theme" />
+            </button>
+        </div>
+
+        <script src="../src/styles/theme.js"></script>
+        <script src="../src/styles/showpassword.js"></script>
+    </body>
+</html>
